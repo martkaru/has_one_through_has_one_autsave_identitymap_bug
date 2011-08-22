@@ -42,7 +42,7 @@ module Railsbug
     # Enable the asset pipeline
     config.assets.enabled = true
 
-    # config.active_record.identity_map = true
-    # ActiveRecord::IdentityMap.enabled = true
+    config.active_record.identity_map = true
+    ActiveRecord::IdentityMap.enabled = true
   end
 end
