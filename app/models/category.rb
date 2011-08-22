@@ -4,9 +4,10 @@ class Category < ActiveRecord::Base
 
   def self.test
     CategoryConnection.destroy_all
+    Category.destroy_all
 
-    parent = Category.find 1
-    child = Category.find 2
+    parent = Category.create(:name => 'Parent')
+    child = Category.create(:name => 'Child')
 
     child.parent = parent
     child.save
